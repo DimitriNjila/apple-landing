@@ -1,0 +1,245 @@
+@import "tailwindcss";
+
+/* ------------------------------
+   BLUE UTILITIES
+------------------------------ */
+@utility bg-blue-custom {
+  background-color: #2997FF;
+}
+@utility text-blue-custom {
+  color: #2997FF;
+}
+@utility border-blue-custom {
+  border-color: #2997FF;
+}
+
+/* ------------------------------
+   GRAY UTILITIES
+------------------------------ */
+
+/* gray.DEFAULT (#86868b) */
+@utility bg-gray-custom {
+  background-color: #86868b;
+}
+@utility text-gray-custom {
+  color: #86868b;
+}
+@utility border-gray-custom {
+  border-color: #86868b;
+}
+
+/* gray.100 (#94928d) */
+@utility bg-gray-100-custom {
+  background-color: #94928d;
+}
+@utility text-gray-100-custom {
+  color: #94928d;
+}
+@utility border-gray-100-custom {
+  border-color: #94928d;
+}
+
+/* gray.200 (#afafaf) */
+@utility bg-gray-200-custom {
+  background-color: #afafaf;
+}
+@utility text-gray-200-custom {
+  color: #afafaf;
+}
+@utility border-gray-200-custom {
+  border-color: #afafaf;
+}
+
+/* gray.300 (#42424570) */
+@utility bg-gray-300-custom {
+  background-color: #42424570;
+}
+@utility text-gray-300-custom {
+  color: #42424570;
+}
+@utility border-gray-300-custom {
+  border-color: #42424570;
+}
+
+/* ------------------------------
+   ZINC UTILITIES
+------------------------------ */
+@utility bg-zinc-custom {
+  background-color: #101010;
+}
+@utility text-zinc-custom {
+  color: #101010;
+}
+@utility border-zinc-custom {
+  border-color: #101010;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #000;
+  border-color: #3b3b3b;
+  user-select: none;
+}
+
+canvas {
+  touch-action: none;
+}
+
+.scrim-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
+}
+
+/* ---------------------------
+   FLEX UTILITIES
+--------------------------- */
+@utility flex-center {
+  @apply flex items-center justify-center;
+}
+
+/* ---------------------------
+   HEIGHT UTILITIES
+--------------------------- */
+@utility nav-height {
+  height: calc(100vh - 60px);
+}
+
+/* ---------------------------
+   BUTTON UTILITIES
+--------------------------- */
+@utility btn {
+  @apply px-5 py-2 rounded-3xl bg-blue-custom my-5 border border-transparent 
+         hover:bg-transparent hover:border-blue-custom hover:text-blue-custom;
+}
+
+/* ---------------------------
+   COLOR PICKER UTILITIES
+--------------------------- */
+@utility color-container {
+  @apply flex items-center justify-center px-4 py-4 rounded-full bg-gray-300-custom backdrop-blur-sm;
+}
+
+@utility size-btn-container {
+  @apply flex items-center justify-center p-1 rounded-full bg-gray-300-custom 
+         backdrop-blur-sm ml-3 gap-1;
+}
+
+@utility size-btn {
+  @apply w-10 h-10 text-sm flex justify-center items-center bg-white text-black 
+         rounded-full transition-all;
+}
+
+/* ---------------------------
+   COMMON PADDING
+--------------------------- */
+@utility common-padding {
+  @apply sm:py-32 py-20 sm:px-10 px-5;
+}
+
+/* ---------------------------
+   SECTION HEADINGS
+--------------------------- */
+@utility section-heading {
+  @apply text-gray-custom lg:text-6xl md:text-5xl text-3xl 
+         lg:mb-0 mb-5 font-medium opacity-0 translate-y-20;
+}
+
+/* ---------------------------
+   FEATURE TEXT
+--------------------------- */
+@utility feature-text {
+  @apply text-gray-custom max-w-md text-lg md:text-xl font-semibold 
+         opacity-0 translate-y-[100px];
+}
+
+@utility feature-text-container {
+  @apply w-full flex-center flex-col md:flex-row mt-10 md:mt-16 gap-5;
+}
+
+/* ---------------------------
+   FEATURE VIDEO
+--------------------------- */
+@utility feature-video {
+  @apply w-full h-full object-cover object-center scale-150 opacity-0;
+}
+
+@utility feature-video-container {
+  @apply w-full flex flex-col md:flex-row gap-5 items-center;
+}
+
+/* ---------------------------
+   LINK UTILITY
+--------------------------- */
+@utility link {
+  @apply text-blue-custom hover:underline cursor-pointer flex items-center 
+         text-xl opacity-0 translate-y-20;
+}
+
+/* ---------------------------
+   CONTROL BUTTONS
+--------------------------- */
+@utility control-btn {
+  @apply ml-4 p-4 rounded-full bg-gray-300-custom backdrop-blur-sm flex-center;
+}
+
+/* ---------------------------
+   HERO TITLE
+--------------------------- */
+@utility hero-title {
+  @apply text-center font-semibold text-3xl text-gray-100-custom opacity-0 max-md:mb-10;
+}
+
+/* ---------------------------
+   HIW TITLES
+--------------------------- */
+@utility hiw-title {
+  @apply text-4xl md:text-7xl font-semibold text-center;
+}
+
+@utility hiw-subtitle {
+  @apply text-gray-custom font-semibold text-xl md:text-2xl py-10 text-center;
+}
+
+/* ---------------------------
+   HIW VIDEO
+--------------------------- */
+@utility hiw-video {
+  @apply absolute w-[95%] h-[90%] rounded-[56px] overflow-hidden;
+}
+
+@utility hiw-text-container {
+  @apply flex md:flex-row flex-col justify-between items-start gap-24;
+}
+
+@utility hiw-text {
+  @apply text-gray-custom text-xl font-normal md:font-semibold;
+}
+
+@utility hiw-bigtext {
+  @apply text-white text-3xl md:text-5xl font-normal md:font-semibold my-2;
+}
+
+/* ---------------------------
+   VIDEO CAROUSEL
+--------------------------- */
+@utility video-carousel_container {
+  @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh];
+}
+
+/* ---------------------------
+   FADE-IN ANIMATION
+--------------------------- */
+@utility g_fadeIn {
+  @apply opacity-0 translate-y-[100px];
+}
